@@ -4,4 +4,4 @@ This repository hosts the practice game to recognize Chinese Traditional charact
 ## To play
 Website : https://sooryakiran.github.io/Chinese-Character-Practice/
 
-Test for characters taught until 20th Aug : 
+Test for characters taught until 20th Aug : https://github.com/Sooryakiran/Chinese-Character-Practice/raw/master/full_test_aug20.soorkie
