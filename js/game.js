@@ -2,7 +2,8 @@ function setup(){
     console.log("Starting");
     mobile = detectMob();
     console.log(mobile);
-    location.href = "mobile.html"
+    if(mobile)
+        location.href = "mobile.html"
     // Load test file
 }
 
