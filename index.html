@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Serif+TC:wght@300&family=Raleway:wght@800&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen"/>
+</head>
+
+<body onload="setup()">
+
+<div class="container">
+    <div id="helper" onclick="help()" class="float_right outshadow" style="font-size: 300%; border-radius: 50%; color : red">
+        <div>
+            <center>?</center>
+        </div>
+    </div>
+    <div class="heading" style="padding: 2em; font-size: 300%;" >
+        Pinying Practice<span style="color:red">.</span>
+    </div>
+    <div class="chinese" id="question" style="font-family: 'Noto Serif TC', serif;">
+        你好
+    </div>
+    <div class="ux">
+        Answer : <input class="answer inshadow" id="answer" type="text" name="answer"/>
+        <button id="submitter" class="outshadow button_animation" onclick="submit()" style="color:red">
+            Submit
+        </button>
+        <button id="close_button" onclick="end_game()" class="outshadow" style="color:red;" >
+            End
+        </button>
+        <br><br>
+        <!-- <br><br>
+        Score : <span id="score">100</span> %<br>
+        Time : <span id="time">0</span>s<br>
+        Avg. time : <span id="avg_time">0</span>s -->
+        <center>
+        <table>
+            <tr>
+                <td>Score : </td>
+                <td class = "" style="padding: 0.5em; margin: 0.3em">
+                    <span  id="score">100</span> %
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>Time : </td>
+                <td class = "" style="padding: 0.5em; margin: 0.3em" >
+                    <span id = "time">0</span> s
+                </td>
+            </tr>
+            <tr>
+                <td>Avg. time : </td>
+                <td class = "" style="padding: 0.5em; margin: 0.3em" >
+                    <span id = "avg_time">0</span> s
+                </td>
+            </tr>
+        </table>
+    </center>
+    </div>
+</div>
+
+<div class="layover" id="layover">
+    <div class="popup">
+        <div class="heading" style="margin: 1.5em">Upload test file<span style="color: red">.</span></div>
+        <div style="position:relative; width:100%; text-align: center; height: 50%;">
+            <input style="position:relative; top: 50%; display: none;" type="file" id="file" />
+            <center style="position:relative;top:50%" >
+                <label for="file" >
+                    <span class="outshadow button_animation" id="file_browse" style="padding: 1em; width: 40%;">Browse</span>
+                </label>
+                <button id="upload_button" onclick="upload_test()" class="outshadow" style="color:red;" disabled="disabled">
+                    Start
+                </button>
+            </center>
+        </div>
+    </div>
+</div>
+
+<div class="layover" id="end_game" style="display: none">
+    <div class="popup">
+        <div class="heading" style="margin: 1.5em">Performance report<span style="color: red">.</span></div>
+        <div style="position:relative; width:100%; text-align: center; height: 50%;">
+            <center style="position:relative;top:10%;" >
+                <div class="outshadow" style="width: 40%; padding: 2em"> 
+                    <table>
+                        <tr>
+                            <td>Score : </td>
+                            <td class = "inshadow" style="padding: 0.5em; margin: 0.3em">
+                                <span  id="final_score">100</span> %
+                            </td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td>Average time : </td>
+                            <td class = "inshadow" style="padding: 0.5em; margin: 0.3em" >
+                                <span id = "final_time">0</span> s
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>No rounds : </td>
+                            <td class = "inshadow" style="padding: 0.5em; margin: 0.3em" >
+                                <span id = "final_samples">0</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    
+                    <a href="index.html" style="text-decoration: none;">
+                        <button class="outshadow button_animation" style="width: 30%;color:red">Replay</button>
+                    </a>
+                    
+                    <button class="outshadow button_animation" onclick="document.exitFullscreen()" style="width: 30%;color:red">Exit</button><br>
+                    <br>
+                    <div style="font-size: 70%">Facing issues?<br> Send feedback to sooryakiran [at] smail.iitm.ac.in</div>
+                    
+                </div>
+            </center>
+        </div>
+    </div>
+</div>
+
+
+<iframe src="https://translate.google.com/?hl=en#view=home&op=translate&sl=auto&tl=en&text=你好" ></iframe>
+
+
+</body>
+<script src="js/game.js"></script>
+
+</html>
