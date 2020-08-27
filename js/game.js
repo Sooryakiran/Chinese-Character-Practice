@@ -1,5 +1,8 @@
 function setup(){
     console.log("Starting");
+    mobile = detectMob();
+    console.log(mobile);
+    location.href = "mobile.html"
     // Load test file
 }
 
@@ -129,4 +132,20 @@ function upload_test(){
         
     };
     fileReader.readAsText(test_file, "UTF-8");
+}
+
+function detectMob() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
 }
