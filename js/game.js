@@ -2,9 +2,26 @@ function setup(){
     console.log("Starting");
     mobile = detectMob();
     console.log(mobile);
-    if(mobile)
-        location.href = "mobile.html"
+    var mobile_url = "mobile.html";
+    if(mobile && (document.getElementById("id").innerText != "mobile"))
+        location.href = mobile_url
     // Load test file
+}
+
+
+function detectMob() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
 }
 
 function to_pinyin(x){
@@ -82,11 +99,12 @@ function submit(){
         if(ans==current_answer){
             total_score += 100;
             document.getElementById("question").className = "correct";
-
+            if(detectMob)document.getElementById("question").className = "correct_mobile";
         }
         else{
             document.getElementById("exp").innerText = to_pinyin(document.getElementById("question").innerText);
             document.getElementById("question").className = "wrong";
+            if(detectMob)document.getElementById("question").className = "wrong_mobile";
             url = "https://translate.google.com/?hl=en#view=home&op=translate&sl=auto&tl=en&text=" + document.getElementById("question").innerText
             
             document.getElementById("helper").className = "float_right_come out_shadow jiggle_help";
@@ -106,6 +124,8 @@ function submit(){
 
 function next_question(){
     document.getElementById("question").className = "chinese";
+    if(detectMob)
+        document.getElementById("question").className = "chinese_mobile";
     full = test_data.split('\n').length;
     rand_id = Math.floor(Math.random() * full);
     data = test_data.split('\n')[rand_id];
@@ -144,7 +164,8 @@ function timer_tick(){
 function upload_test(){
     console.log("Uploading");
     test_file = document.getElementById("file").files[0];
-    document.body.requestFullscreen()
+    if(!detectMob())
+        document.body.requestFullscreen()
     var fileReader = new FileReader();
     fileReader.onload = function(fileLoadedEvent){
         var textFromFileLoaded = fileLoadedEvent.target.result;
@@ -158,19 +179,4 @@ function upload_test(){
         
     };
     fileReader.readAsText(test_file, "UTF-8");
-}
-
-function detectMob() {
-    const toMatch = [
-        /Android/i,
-        /webOS/i,
-        /iPhone/i,
-        /iPod/i,
-        /BlackBerry/i,
-        /Windows Phone/i
-    ];
-
-    return toMatch.some((toMatchItem) => {
-        return navigator.userAgent.match(toMatchItem);
-    });
 }

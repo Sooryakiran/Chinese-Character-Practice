@@ -10,8 +10,47 @@
 </head>
 
 <body onload="setup()">
-<div id="id" style="display:none">PC</div>
-<div class="container">
+<div id="id" style="display:none">mobile</div>
+
+<table class="table_mobile">
+    <tr style="height: 20%">
+        <td style="width:100%">
+            <table style="width:100%">
+                <tr>
+                    <td style="width:15%">
+                        Score<br>
+                        <span  id="score">100</span> %
+                    </td>
+                    
+                    <td style="width:70%">
+                        <div class="heading_mobile" style="font-size: 130%; text-align: center;" >
+                            Pinying Practice<span style="color:red">.</span>
+                        </div>
+                    </td>
+                    <td style="width:15%; text-align: right;">
+                        Time<br>
+                        <span id = "time">0</span> s
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr style="height: 20%">
+        <td style="width: 100%;">
+            <div class="chinese_mobile" id="question" style="font-family: 'Noto Serif TC', serif;">
+                你好
+            </div>
+            <div class="exp_inv" id="exp">Ni hao</div>
+        </td>
+    </tr>
+    <tr style="height: 20%">
+
+    </tr>
+    <tr style="height:40%"> <td>xxxx</td></tr>
+</table>
+
+<!-- <div class="container">
     <div id="helper" onclick="help()" class="float_right outshadow" style="font-size: 300%; border-radius: 50%; color : red">
         <div>
             <center>?</center>
@@ -33,10 +72,7 @@
             End
         </button>
         <br><br>
-        <!-- <br><br>
-        Score : <span id="score">100</span> %<br>
-        Time : <span id="time">0</span>s<br>
-        Avg. time : <span id="avg_time">0</span>s -->
+   
         <center>
         <table>
             <tr>
@@ -61,18 +97,20 @@
         </table>
     </center>
     </div>
-</div>
+</div> -->
 
-<div class="layover" id="layover">
-    <div class="popup">
-        <div class="heading" style="margin: 1.5em">Upload test file<span style="color: red">.</span></div>
+<div class="layover_mobile" id="layover">
+    <!-- <div class="header_mobile">Hi</div> -->
+    <div class="popup_mobile">
+        
         <div style="position:relative; width:100%; text-align: center; height: 50%;">
             <input style="position:relative; top: 50%; display: none;" type="file" id="file" />
             <center style="position:relative;top:50%" >
+                <div class="heading_mobile" style="margin: 1.5em; font-size: 150%">Upload test file<span style="color: red">.</span></div><br>
                 <label for="file" >
-                    <span class="outshadow button_animation" id="file_browse" style="padding: 1em; width: 40%;">Browse</span>
-                </label>
-                <button id="upload_button" onclick="upload_test()" class="outshadow" style="color:red;" disabled="disabled">
+                    <div class=" mobile_button outshadow_mobile"  ><div id="file_browse" style="padding: 1em; ">Browse</div></div>
+                </label><br>
+                <button id="upload_button" onclick="upload_test()" class="mobile_button outshadow_mobile" style="color:red;" disabled="disabled">
                     Start
                 </button>
             </center>
@@ -80,7 +118,7 @@
     </div>
 </div>
 
-<div class="layover" id="end_game" style="display: none">
+<div class="layover_mobile" id="end_game" style="display: none">
     <div class="popup">
         <div class="heading" style="margin: 1.5em">Performance report<span style="color: red">.</span></div>
         <div style="position:relative; width:100%; text-align: center; height: 50%;">

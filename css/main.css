@@ -8,6 +8,16 @@
     margin: auto;
     transition: color 0.3s ease-out;
 }
+
+
+.chinese_mobile{
+    font-family: 'Noto Serif TC', serif;
+    width: 100%;
+    text-align: center;
+    font-size: 600%;
+    color : rgb(87, 87, 175);
+    transition: color 0.3s ease-out;
+}
 .container{
     border: 0;
     margin: 0;
@@ -31,6 +41,26 @@ body{
     font-size: 500%;
     color :green;
     margin: auto;
+    transition: color 0.3s ease-out;
+    
+}
+
+.correct_mobile{
+    font-family: 'Noto Serif TC', serif;
+    width: 100%;
+    text-align: center;
+    font-size: 500%;
+    color :rgb(51, 139, 83);
+    transition: color 0.3s ease-out;
+    
+}
+
+.wrong_mobile{
+    font-family: 'Noto Serif TC', serif;
+    width: 100%;
+    text-align: center;
+    font-size: 500%;
+    color :rgb(172, 33, 68);
     transition: color 0.3s ease-out;
     
 }
@@ -92,6 +122,15 @@ button{
     transition: box-shadow 0.1s ease-out;
 }
 
+.outshadow_mobile{
+    border-radius: 25px;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 2px 2px 3px rgba(0,0,0, .1),
+                -2px -2px 3px rgb(30, 30, 30,1);
+    border: none;
+    transition: box-shadow 0.1s ease-out;
+}
+
 .button_animation:active{
     -webkit-animation-name: en_large;
     -webkit-animation-duration: 0.3s;
@@ -116,7 +155,9 @@ button{
                 -5px -5px 15px rgb(255,255,255,1);
     }
 }
-
+.mobile_button{
+    width: 50%;
+}
 .outshadow:hover{
     border-radius: 25px;
     background-color: rgb(240, 240, 240);
@@ -124,9 +165,37 @@ button{
                 -5px -5px 15px rgb(255,255,255,1);
     border: none;
 }
+.table_mobile{
+    position: absolute;
+    top: 0%;
+    left : 0%;
+    width : 100%;
+    height: 100%;
+    color : rgb(150, 150, 150);
+    background-color: rgb(20, 20, 20);
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5em;
+    vertical-align: top;
+}
+
+td{
+    vertical-align: top;
+}
+.outshadow_mobile:hover{
+    border-radius: 25px;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 2px 2px 5px rgba(0,0,0, .1),
+                -2px -2px 5px rgb(30, 30, 30,1);
+    border: none;
+}
 
 .heading{
     color : black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heading_mobile{
+    color : rgb(150, 150, 150);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -140,6 +209,26 @@ button{
     /* transition: opacity 1s ease-out */
 }
 
+.layover_mobile{
+    position: absolute;
+    z-index: 9;
+    background-color:rgba(20,20,20,1);
+    width: 100%;
+    height: 100%;
+    /* opacity : 0.0; */
+    /* transition: opacity 1s ease-out */
+}
+.header_mobile{
+    /* Z-index : 10; */
+    /* position: absolute; */
+    background-color: rgba(20,20,20,1);
+    top: 0%;
+    width: 100%;
+    left: 100%;
+    height: 3em;
+    margin: 1em;
+    text-align : center;
+}
 .popup{
     font-family: 'Roboto', sans-serif;
     position: absolute;
@@ -150,6 +239,22 @@ button{
     padding: 2em 0em;
     margin : auto;
     left: 20%;
+    top: 30%;
+    border-radius: 25px;
+   
+}
+
+.popup_mobile{
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    z-index: 10;
+    color : rgb(150, 150, 150);
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+    /* height: 60%; */
+    padding: 2em 0em;
+    margin : auto;
+    left: 0%;
     top: 30%;
     border-radius: 25px;
    
