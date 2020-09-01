@@ -13,7 +13,7 @@
 <div id="id" style="display:none">mobile</div>
 
 <table class="table_mobile">
-    <tr style="height: 20%">
+    <tr style="height: 15%">
         <td style="width:100%">
             <table style="width:100%">
                 <tr>
@@ -36,7 +36,7 @@
         </td>
     </tr>
 
-    <tr style="height: 20%">
+    <tr style="height: 15%">
         <td style="width: 100%;">
             <div class="chinese_mobile" id="question" style="font-family: 'Noto Serif TC', serif;">
                 你好
@@ -44,60 +44,29 @@
             <div class="exp_inv" id="exp">Ni hao</div>
         </td>
     </tr>
-    <tr style="height: 20%">
-
+    <tr style="height: 15%">
+        <td>
+            <center>
+                <input class="answer inshadow_mobile" id="answer" type="text" name="answer"/>
+                <br><br>
+                <button id="submitter" class="outshadow_mobile mobile_button" onclick="submit()" style="color:red">
+                    Submit
+                </button>
+                <br><br>
+                <button id="close_button" onclick="end_game()" class="outshadow_mobile mobile_button" style="color:red;" >
+                    End
+                </button>
+            </center>
+        </td>
     </tr>
-    <tr style="height:40%"> <td>xxxx</td></tr>
+    <tr style="height:55%"> <td><br><br>
+        <center>Average time : <span id = "avg_time">0</span> s</center>
+        
+
+    </td></tr>
 </table>
 
-<!-- <div class="container">
-    <div id="helper" onclick="help()" class="float_right outshadow" style="font-size: 300%; border-radius: 50%; color : red">
-        <div>
-            <center>?</center>
-        </div>
-    </div>
-    <div class="heading" style="padding: 2em; font-size: 300%;" >
-        Pinying Practice<span style="color:red">.</span>
-    </div>
-    <div class="chinese" id="question" style="font-family: 'Noto Serif TC', serif;">
-        你好
-    </div>
-    <div class="exp_inv" id="exp">Ni hao</div>
-    <div class="ux">
-        Answer : <input class="answer inshadow" id="answer" type="text" name="answer"/>
-        <button id="submitter" class="outshadow button_animation" onclick="submit()" style="color:red">
-            Submit or Press Enter
-        </button>
-        <button id="close_button" onclick="end_game()" class="outshadow" style="color:red;" >
-            End
-        </button>
-        <br><br>
-   
-        <center>
-        <table>
-            <tr>
-                <td>Score : </td>
-                <td class = "" style="padding: 0.5em; margin: 0.3em">
-                    <span  id="score">100</span> %
-                </td>
-            </tr>
-            <tr></tr>
-            <tr>
-                <td>Time : </td>
-                <td class = "" style="padding: 0.5em; margin: 0.3em" >
-                    <span id = "time">0</span> s
-                </td>
-            </tr>
-            <tr>
-                <td>Avg. time : </td>
-                <td class = "" style="padding: 0.5em; margin: 0.3em" >
-                    <span id = "avg_time">0</span> s
-                </td>
-            </tr>
-        </table>
-    </center>
-    </div>
-</div> -->
+
 
 <div class="layover_mobile" id="layover">
     <!-- <div class="header_mobile">Hi</div> -->
@@ -119,40 +88,42 @@
 </div>
 
 <div class="layover_mobile" id="end_game" style="display: none">
-    <div class="popup">
-        <div class="heading" style="margin: 1.5em">Performance report<span style="color: red">.</span></div>
+    <div class="popup_mobile" style="top: 10%">
+        <center>
+            <div class="heading_mobile" style="margin: 1.5em">Performance report<span style="color: red">.</span></div>
+        </center>
         <div style="position:relative; width:100%; text-align: center; height: 50%;">
-            <center style="position:relative;top:10%;" >
-                <div class="outshadow" style="width: 40%; padding: 2em"> 
-                    <table>
+            <center style="position:relative;" >
+                <div class="outshadow_mobile" style="width: 60%; padding: 2em"> 
+                    <table style="width:80%">
                         <tr>
                             <td>Score : </td>
-                            <td class = "inshadow" style="padding: 0.5em; margin: 0.3em">
+                            <td class = "inshadow_mobile" style="padding: 0.5em; margin: 0.3em">
                                 <span  id="final_score">100</span> %
                             </td>
                         </tr>
                         <tr></tr>
                         <tr>
                             <td>Average time : </td>
-                            <td class = "inshadow" style="padding: 0.5em; margin: 0.3em" >
+                            <td class = "inshadow_mobile" style="padding: 0.5em; margin: 0.3em" >
                                 <span id = "final_time">0</span> s
                             </td>
                         </tr>
                         <tr>
                             <td>No rounds : </td>
-                            <td class = "inshadow" style="padding: 0.5em; margin: 0.3em" >
+                            <td class = "inshadow_mobile" style="padding: 0.5em; margin: 0.3em" >
                                 <span id = "final_samples">0</span>
                             </td>
                         </tr>
                     </table>
                     <br>
-                    
-                    <a href="index.html" style="text-decoration: none;">
-                        <button class="outshadow button_animation" style="width: 30%;color:red">Replay</button>
-                    </a>
-                    
-                    <button class="outshadow button_animation" onclick="document.exitFullscreen()" style="width: 30%;color:red">Exit</button><br>
                     <br>
+                    <a href="index.html" style="text-decoration: none;">
+                        <button class="outshadow_mobile mobile_button" style="color:red">Replay</button>
+                    </a><br><br>
+                    <!-- <br><br>
+                    <button class="outshadow_mobile mobile_button" onclick="document.exitFullscreen()" style="color:red">Exit</button><br>
+                    <br> -->
                     <div style="font-size: 70%">Facing issues?<br> Send feedback to sooryakiran [at] smail.iitm.ac.in</div>
                     
                 </div>

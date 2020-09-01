@@ -83,7 +83,8 @@ function help(){
 }
 
 function fade_away(){
-    document.getElementById("helper").className = "float_right out_shadow";
+    if(!detectMob())
+        document.getElementById("helper").className = "float_right out_shadow";
     document.getElementById("exp").className = "exp_inv";
 }
 
@@ -99,15 +100,16 @@ function submit(){
         if(ans==current_answer){
             total_score += 100;
             document.getElementById("question").className = "correct";
-            if(detectMob)document.getElementById("question").className = "correct_mobile";
+            if(document.getElementById("id").innerText == "mobile")document.getElementById("question").className = "correct_mobile";
         }
         else{
             document.getElementById("exp").innerText = to_pinyin(document.getElementById("question").innerText);
             document.getElementById("question").className = "wrong";
-            if(detectMob)document.getElementById("question").className = "wrong_mobile";
+            if(document.getElementById("id").innerText == "mobile")document.getElementById("question").className = "wrong_mobile";
             url = "https://translate.google.com/?hl=en#view=home&op=translate&sl=auto&tl=en&text=" + document.getElementById("question").innerText
             
-            document.getElementById("helper").className = "float_right_come out_shadow jiggle_help";
+            if(!detectMob())
+                document.getElementById("helper").className = "float_right_come out_shadow jiggle_help";
             document.getElementById("exp").className = "exp";
             setTimeout(fade_away, 2000);
         }
@@ -124,7 +126,7 @@ function submit(){
 
 function next_question(){
     document.getElementById("question").className = "chinese";
-    if(detectMob)
+    if(document.getElementById("id").innerText == "mobile")
         document.getElementById("question").className = "chinese_mobile";
     full = test_data.split('\n').length;
     rand_id = Math.floor(Math.random() * full);

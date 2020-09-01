@@ -49,7 +49,7 @@ body{
     font-family: 'Noto Serif TC', serif;
     width: 100%;
     text-align: center;
-    font-size: 500%;
+    font-size: 600%;
     color :rgb(51, 139, 83);
     transition: color 0.3s ease-out;
     
@@ -59,7 +59,7 @@ body{
     font-family: 'Noto Serif TC', serif;
     width: 100%;
     text-align: center;
-    font-size: 500%;
+    font-size: 600%;
     color :rgb(172, 33, 68);
     transition: color 0.3s ease-out;
     
@@ -120,6 +120,25 @@ button{
                 -2px -2px 10px rgb(255,255,255,1);
     border: none;
     transition: box-shadow 0.1s ease-out;
+}
+
+.inshadow_mobile{
+    border-radius: 25px;
+    background-color: rgb(20, 20, 20);
+    color : rgb(150, 150, 150);
+    box-shadow: inset 2px 2px 5px rgba(0,0,0, .2),
+                inset -2px -2px 5px rgb(30, 30, 30,1);
+    border: none;
+    transition: box-shadow 0.1s ease-out;
+}
+
+.inshadow_mobile:focus{
+    border-radius: 25px;
+    background-color: rgb(20, 20, 20);
+    color : rgb(150, 150, 150);
+    box-shadow: inset 3px 3px 8px rgba(0,0,0, .3),
+                inset -3px -3px 8px rgb(30, 30, 30,1);
+    border: none;
 }
 
 .outshadow_mobile{
@@ -197,6 +216,8 @@ td{
 .heading_mobile{
     color : rgb(150, 150, 150);
     font-family: 'Montserrat', sans-serif;
+    margin: 1.5em;
+    font-size: 150%
 }
 
 .layover{
