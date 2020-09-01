@@ -112,6 +112,16 @@ function next_question(){
     ques = data.split(",")[0];
     ans = data.split(",")[1];
 
+    // console.log(ques.length);
+
+    if(ques.length > 1){
+        rand_id = Math.floor(Math.random() * 3);
+        console.log("Split" + rand_id)
+        if(rand_id != 2){
+            ques = ques[rand_id];
+            ans = ans.split(" ")[rand_id];
+        }
+    }
     // Reset timer
     document.getElementById("time").innerText = 0;
     // Set answer
