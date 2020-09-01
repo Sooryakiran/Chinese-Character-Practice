@@ -2,7 +2,7 @@ function setup(){
     console.log("Starting");
     mobile = detectMob();
     console.log(mobile);
-    var mobile_url = "mobile.html";
+    var mobile_url = "mobile_beta.html";
     if(mobile && (document.getElementById("id").innerText != "mobile"))
         location.href = mobile_url
     // Load test file
