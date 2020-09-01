@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Serif+TC:wght@300&family=Raleway:wght@800&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" type="text/css" href="css/main.css" media="screen"/>
@@ -22,8 +23,9 @@
     <div class="chinese" id="question" style="font-family: 'Noto Serif TC', serif;">
         你好
     </div>
+    <div class="exp_inv" id="exp">Ni hao</div>
     <div class="ux">
-        Answer : <input class="answer inshadow" id="answer" type="text" name="answer"/>
+        Answer : <input class="answer inshadow" id="answer" type="text" name="answer" placeholder="Click submit or press enter"/>
         <button id="submitter" class="outshadow button_animation" onclick="submit()" style="color:red">
             Submit
         </button>
@@ -125,6 +127,7 @@
 
 
 </body>
+<script src="js/pinyin.dict.js"></script>
 <script src="js/game.js"></script>
 
 </html>

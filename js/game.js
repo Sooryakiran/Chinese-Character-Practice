@@ -7,6 +7,18 @@ function setup(){
     // Load test file
 }
 
+function to_pinyin(x){
+    var output = "";
+    for(var i=0; i<x.length; i++){
+        
+        var c = pinyin_dict[x[i]]
+        if(c!=undefined)
+
+            output += c + " ";
+    }
+    return output;
+}
+
 var test_file = 0;
 var test_data = 0;
 
@@ -55,6 +67,7 @@ function help(){
 
 function fade_away(){
     document.getElementById("helper").className = "float_right out_shadow";
+    document.getElementById("exp").className = "exp_inv";
 }
 
 function submit(){
@@ -72,11 +85,13 @@ function submit(){
 
         }
         else{
+            document.getElementById("exp").innerText = to_pinyin(document.getElementById("question").innerText);
             document.getElementById("question").className = "wrong";
             url = "https://translate.google.com/?hl=en#view=home&op=translate&sl=auto&tl=en&text=" + document.getElementById("question").innerText
             
             document.getElementById("helper").className = "float_right_come out_shadow jiggle_help";
-            setTimeout(fade_away, 3000);
+            document.getElementById("exp").className = "exp";
+            setTimeout(fade_away, 2000);
         }
 
         n +=1;
@@ -140,7 +155,6 @@ function detectMob() {
         /Android/i,
         /webOS/i,
         /iPhone/i,
-        /iPad/i,
         /iPod/i,
         /BlackBerry/i,
         /Windows Phone/i
